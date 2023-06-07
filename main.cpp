@@ -69,7 +69,8 @@ void calculateResult(double number_1, char operation, double number_2){
         case '/':
             if (number_2 != 0.0)
                 std::cout<< number_1 / number_2<<std::endl;
-            std::cerr<<"sorry, can't devide by zero";
+            else
+                std::cerr<<"sorry, can't devide by zero";
             break;
     }
 }
