@@ -30,11 +30,12 @@ char getOperatin(){
     char operation = {};
 
     while(true){
+        
         std::cout<<"enter an operation"<<std::endl;
         std::cin>>operation;
 
         if (!std::cin){
-            std::cin.clear();
+            std::cin.clear();  
         }
 
         switch (operation)
@@ -46,6 +47,7 @@ char getOperatin(){
             return operation;
         default:
             std::cerr<<"the givven operation is not supported"<<std::endl;
+            ignoreLine();
         }
 
     }
@@ -56,15 +58,19 @@ void calculateResult(double number_1, char operation, double number_2){
 
     switch (operation){
         case '+':
-            std::cout<< number_1 + number_2;
+            std::cout<< number_1 + number_2<<std::endl;
+            break;
         case '-':
-            std::cout<< number_1 - number_2;
+            std::cout<< number_1 - number_2<<std::endl;
+            break;
         case '*':
-            std::cout<< number_1 * number_2;
+            std::cout<< number_1 * number_2<<std::endl;
+            break;
         case '/':
             if (number_2 != 0.0)
-                std::cout<< number_1 / number_2;
+                std::cout<< number_1 / number_2<<std::endl;
             std::cerr<<"sorry, can't devide by zero";
+            break;
     }
 }
 
